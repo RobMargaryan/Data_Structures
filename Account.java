@@ -1,10 +1,9 @@
-package Data_Structures;
-
 public class Account {
     private final String FirstName;
     private final String LastName;
     private int id;
     private Account next;
+    private Account prev;
     private byte age;
     private Account left;
     private Account right;
@@ -53,10 +52,13 @@ public class Account {
     public Account getRight() {
         return right;
     }
+    public Account getPrev() {
+        return prev;
+    }
     public void setNext(Account n) {
         next = n;
     }
-     public void setPrev(Account p){
+    public void setPrev(Account p){
         prev = p;
     }
 }
