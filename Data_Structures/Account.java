@@ -1,4 +1,4 @@
-package Data_Structures;
+package Data_Structures.Data_Structures;
 
 public class Account {
     private final String FirstName;
