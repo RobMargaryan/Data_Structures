@@ -17,7 +17,14 @@ public class Account {
         this.next = next;
     }
 
-
+    public Account(String FirstName, String LastName, int AccNum, byte age, Account left, Account right) {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        this.AccNum = AccNum;
+        this.age = age;
+        this.left = left;
+        this.right = right;
+    }
     public String getFirstName() {
         return FirstName;
     }
