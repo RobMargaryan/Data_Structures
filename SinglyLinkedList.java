@@ -10,11 +10,11 @@ public class SinglyLinkedList {
          public int size( ) { return size; }
     public boolean isEmpty( ) { return size == 0; }
     public int first( ) {
-       if (isEmpty( )) return 0;
+       if (isEmpty( )) return -1;
         return head.getAccNum();
         }
     public int last( ) {
-        if (isEmpty( )) return 0;
+        if (isEmpty( )) return -1;
         return tail.getAccNum();
         }
 
@@ -34,7 +34,7 @@ public class SinglyLinkedList {
         size++;
         }
     public int removeFirst( ) {
-        if (isEmpty( )) return 0;
+        if (isEmpty( )) return -1;
         int answer = head.getAccNum();
         head = head.getNext( );
         size--;
