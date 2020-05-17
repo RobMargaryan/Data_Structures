@@ -3,8 +3,7 @@ public class SinglyLinkedList {
     private Account tail = null;
     private int size = 0;
 
-    public SinglyLinkedList() {
-    }
+    public SinglyLinkedList() {}
 
     public int size() {
         return size;
