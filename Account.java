@@ -38,8 +38,8 @@ public class Account {
     public String getLastName() {
         return LastName;
     }
-    public int getAccNum() {
-        return AccNum;
+    public int getID() {
+        return id;
     }
     public byte getAge() {
         return age;
