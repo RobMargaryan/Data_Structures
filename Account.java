@@ -3,28 +3,35 @@ package Data_Structures;
 public class Account {
     private final String FirstName;
     private final String LastName;
-    private int AccNum;
+    private int id;
     private Account next;
     private byte age;
     private Account left;
     private Account right;
 
-    public Account(String FirstName, String LastName, int AccNum, byte age, Account next){
+    public Account(String FirstName, String LastName, byte age, Account next){
         this.FirstName = FirstName;
         this.LastName = LastName;
-        this.AccNum = AccNum;
+        id = generateHashID();
         this.age = age;
         this.next = next;
     }
 
-    public Account(String FirstName, String LastName, int AccNum, byte age, Account left, Account right) {
+    public Account(String FirstName, String LastName, byte age, Account left, Account right) {
         this.FirstName = FirstName;
         this.LastName = LastName;
-        this.AccNum = AccNum;
+        id = generateHashID();
         this.age = age;
         this.left = left;
         this.right = right;
     }
+    
+    private int generateHashID() {
+        id ^= hashCode();
+        id = (id << 5) | (id >>> 27);
+        return id;
+    }
+
     public String getFirstName() {
         return FirstName;
     }
