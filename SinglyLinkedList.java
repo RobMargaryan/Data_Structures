@@ -11,21 +11,21 @@ public class SinglyLinkedList {
     public boolean isEmpty( ) { return size == 0; }
     public int first( ) {
        if (isEmpty( )) return 0;
-        return head.getAccNum();
+        return head.getID();
         }
     public int last( ) {
         if (isEmpty( )) return 0;
-        return tail.getAccNum();
+        return tail.getID();
         }
 
         public void addFirst(String FirstName, String LastName, int AccNum, byte age) {
-        head = new Account(FirstName, LastName, AccNum, age, head);
+        head = new Account(FirstName, LastName, age, head);
         if (size == 0)
             tail = head;
         size++;
         }
     public void addLast(String FirstName, String LastName, int AccNum, byte age) {
-        Account newest = new Account(FirstName, LastName, AccNum, age,null);
+        Account newest = new Account(FirstName, LastName, age,null);
         if (isEmpty( ))
             head = newest;
         else
@@ -35,7 +35,7 @@ public class SinglyLinkedList {
         }
     public int removeFirst( ) {
         if (isEmpty( )) return 0;
-        int answer = head.getAccNum();
+        int answer = head.getID();
         head = head.getNext( );
         size--;
         if (size == 0)

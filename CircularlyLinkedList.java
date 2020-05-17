@@ -9,29 +9,29 @@ public class CircularlyLinkedList {
         public boolean isEmpty() { return size == 0; }
         public int first( ) {
             if (isEmpty( )) return -1;
-        return tail.getNext( ).getAccNum( );
+        return tail.getNext( ).getID( );
         }
         public int last( ) {
         if (isEmpty( )) return -1;
-        return tail.getAccNum();
+        return tail.getID();
         }
 
         public void rotate( ) {
         if (tail != null)
                 tail = tail.getNext( );
         }
-        public void addFirst(String FirstName, String LastName, int AccNum, byte age) {
+        public void addFirst(String FirstName, String LastName, int id, byte age) {
         if (size == 0) {
-            tail = new Account(FirstName, LastName, AccNum, age, null);
+            tail = new Account(FirstName, LastName, age, null);
             tail.setNext(tail);
             } else {
-            Account newest = new Account(FirstName, LastName, AccNum, age, tail.getNext( ));
+            Account newest = new Account(FirstName, LastName, age, tail.getNext( ));
             tail.setNext(newest);
             }
         size++;
         }
-        public void addLast(String FirstName, String LastName, int AccNum, byte age) {
-        addFirst(FirstName, LastName, AccNum, age);
+        public void addLast(String FirstName, String LastName, int id, byte age) {
+        addFirst(FirstName, LastName, id, age);
         tail = tail.getNext( );
         }
         public int removeFirst( ) {
@@ -40,6 +40,6 @@ public class CircularlyLinkedList {
         if (head == tail) tail = null;
         else tail.setNext(head.getNext());
         size--;
-        return head.getAccNum();
+        return head.getID();
         }
     }
