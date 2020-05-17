@@ -1,4 +1,5 @@
-package Data_Structures;
+package Stack;
+import Account.Account;
 
 public class AccountStack implements Stack<Account> {
     public static final int CAPACITY = 5000;
@@ -28,7 +29,7 @@ public class AccountStack implements Stack<Account> {
     @Override
     public void push(Account account) throws IllegalStateException {
         if (size() == data.length)
-            throw new IllegalStateException("Stack is full");
+            throw new IllegalStateException("Stack.Stack is full");
         data[++topIndex] = account;
     }
 
