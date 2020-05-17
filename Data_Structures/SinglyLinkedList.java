@@ -1,5 +1,4 @@
 package Data_Structures;
-import Data_Structures.Account;
 
 public class SinglyLinkedList {
     private Account head = null;
