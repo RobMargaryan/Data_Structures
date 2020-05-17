@@ -26,14 +26,14 @@ public class SinglyLinkedList {
         return tail.getID();
     }
 
-    public void addFirst(String FirstName, String LastName, int AccNum, byte age) {
+    public void addFirst(String FirstName, String LastName, byte age) {
         head = new Account(FirstName, LastName, age, head);
         if (size == 0)
             tail = head;
         size++;
     }
 
-    public void addLast(String FirstName, String LastName, int AccNum, byte age) {
+    public void addLast(String FirstName, String LastName, byte age) {
         Account newest = new Account(FirstName, LastName, age, null);
         if (isEmpty())
             head = newest;

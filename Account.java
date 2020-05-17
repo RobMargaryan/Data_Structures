@@ -10,6 +10,14 @@ public class Account {
     private Account left;
     private Account right;
 
+    public Account(){
+        this.FirstName=null;
+        this.LastName = null;
+        this.age = 0;
+        this.next = null;
+        this.prev = null;
+    }
+
     public Account(String FirstName, String LastName, byte age, Account next){
         this.FirstName = FirstName;
         this.LastName = LastName;
@@ -18,13 +26,22 @@ public class Account {
         this.next = next;
     }
 
-    public Account(String FirstName, String LastName, byte age, Account left, Account right) {
+    public Account(String FirstName, String LastName, Account left, byte age, Account right) {
         this.FirstName = FirstName;
         this.LastName = LastName;
         id = generateHashID();
         this.age = age;
         this.left = left;
         this.right = right;
+    }
+
+    public Account(String FirstName, String LastName, byte age, Account next, Account prev) {
+        this.FirstName = FirstName;
+        this.LastName = LastName;
+        id = generateHashID();
+        this.age = age;
+        this.next = next;
+        this.prev = prev;
     }
     
     private int generateHashID() {
