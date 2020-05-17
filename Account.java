@@ -1,13 +1,13 @@
 package Data_Structures;
 
 public class Account {
-    String FirstName;
-    String LastName;
-    int AccNum;
-    Account next;
-    byte age;
-    Account left;
-    Account right;
+    private String FirstName;
+    private String LastName;
+    private int AccNum;
+    private Account next;
+    private byte age;
+    private Account left;
+    private Account right;
 
     public Account(String FirstName, String LastName, int AccNum, byte age, Account next){
         this.FirstName = FirstName;
@@ -18,11 +18,29 @@ public class Account {
     }
 
 
-    public String getName(){return FirstName;}
-    public String getSurName(){return LastName;}
-    public int getAccNum(){return AccNum;}
-    public byte getAge(){return age;}
-    public Account getNext(){return next;}
-    public void setNext(Account n){next = n;}
+    public String getFirstName() {
+        return FirstName;
+    }
+    public String getLastName() {
+        return LastName;
+    }
+    public int getAccNum() {
+        return AccNum;
+    }
+    public byte getAge() {
+        return age;
+    }
+    public Account getNext() {
+        return next;
+    }
+    public Account getLeft() {
+        return left;
+    }
+    public Account getRight() {
+        return right;
+    }
+    public void setNext(Account n) {
+        next = n;
+    }
 
 }
