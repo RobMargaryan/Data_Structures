@@ -56,5 +56,7 @@ public class Account {
     public void setNext(Account n) {
         next = n;
     }
-
+     public void setPrev(Account p){
+        prev = p;
+    }
 }
