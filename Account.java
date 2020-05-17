@@ -63,4 +63,7 @@ public class Account {
     public void setPrev(Account p){
         prev = p;
     }
+    public void setAge(byte age) {
+        this.age = age;
+    }
 }
