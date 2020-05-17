@@ -1,8 +1,8 @@
 package Data_Structures;
 
 public class Account {
-    private String FirstName;
-    private String LastName;
+    private final String FirstName;
+    private final String LastName;
     private int AccNum;
     private Account next;
     private byte age;
