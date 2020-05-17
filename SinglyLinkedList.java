@@ -1,3 +1,6 @@
+package Data_Structures;
+import Data_Structures.Account;
+
 public class SinglyLinkedList {
     private Account head = null;
     private Account tail = null;
@@ -24,14 +27,14 @@ public class SinglyLinkedList {
     }
 
     public void addFirst(String FirstName, String LastName, int AccNum, byte age) {
-        head = new Account(FirstName, LastName, AccNum, age, head);
+        head = new Account(FirstName, LastName, age, head);
         if (size == 0)
             tail = head;
         size++;
     }
 
     public void addLast(String FirstName, String LastName, int AccNum, byte age) {
-        Account newest = new Account(FirstName, LastName, AccNum, age, null);
+        Account newest = new Account(FirstName, LastName, age, null);
         if (isEmpty())
             head = newest;
         else

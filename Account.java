@@ -1,3 +1,5 @@
+package Data_Structures;
+
 public class Account {
     private final String FirstName;
     private final String LastName;
