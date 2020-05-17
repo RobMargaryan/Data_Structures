@@ -7,14 +7,14 @@ public class SinglyLinkedList {
     private Account tail = null;
     private int size = 0;
     public SinglyLinkedList() { }
-         public int size() { return size; }
-    public boolean isEmpty() { return size == 0; }
-    public int first() {
-       if (isEmpty()) return 0;
+         public int size( ) { return size; }
+    public boolean isEmpty( ) { return size == 0; }
+    public int first( ) {
+       if (isEmpty( )) return 0;
         return head.getAccNum();
         }
-    public int last() {
-        if (isEmpty()) return 0;
+    public int last( ) {
+        if (isEmpty( )) return 0;
         return tail.getAccNum();
         }
 
@@ -26,7 +26,7 @@ public class SinglyLinkedList {
         }
     public void addLast(String FirstName, String LastName, int AccNum, byte age) {
         Account newest = new Account(FirstName, LastName, AccNum, age,null);
-        if (isEmpty())
+        if (isEmpty( ))
             head = newest;
         else
         tail.setNext(newest);
@@ -36,7 +36,7 @@ public class SinglyLinkedList {
     public int removeFirst( ) {
         if (isEmpty( )) return 0;
         int answer = head.getAccNum();
-        head = head.getNext();
+        head = head.getNext( );
         size--;
         if (size == 0)
             tail = null;
