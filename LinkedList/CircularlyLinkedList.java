@@ -1,5 +1,5 @@
-package Data_Structures.Data_Structures;
-import Data_Structures.Data_Structures.Account;
+package LinkedList;
+import Account.Account;
 
 public class CircularlyLinkedList {
     private Account tail = null;

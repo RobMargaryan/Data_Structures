@@ -1,4 +1,4 @@
-package Data_Structures;
+package Stack;
 
 public interface Stack<E> {
     int size();
